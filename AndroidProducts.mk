@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_vayu.mk
+    $(LOCAL_DIR)/kangos_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_vayu-user \
-    dot_vayu-userdebug \
-    dot_vayu-eng
+    kangos_vayu-user \
+    kangos_vayu-userdebug \
+    kangos_vayu-eng

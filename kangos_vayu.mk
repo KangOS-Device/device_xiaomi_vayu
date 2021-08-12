@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common dot stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit some common kangos stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Inherit from vayu device
 $(call inherit-product, device/xiaomi/vayu/device.mk)
@@ -17,7 +17,7 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := dot_vayu
+PRODUCT_NAME := kangos_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -34,8 +34,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="POCO X3 Pro" \
     TARGET_DEVICE="POCO X3 Pro"
 
-# Inherit DotOS Official stuff.
-TARGET_FACE_UNLOCK_SUPPORTED := true
+# Kangos Properties
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=LuckYVii \
+  ro.kangos.cpu=SDM860
 
-# Offline Charging
-TARGET_INCLUDE_PIXEL_CHARGER := true
+KANGOS_BUILDTYPE := OFFICIAL
+TARGET_FACE_UNLOCK_SUPPORTED := true
